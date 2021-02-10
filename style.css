@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat|Playfair+Display&display=swap');
+
+/* Global styling */
+.heading h1, .ingredients_details h2, .checkbox_details h3, .instruct_contain h2{
+    font-family: 'Playfair Display';
+}
+
+.subhead_details, .servings_time, .chckbox_contain, .instruct, footer{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+}
+
+.heading{
+    position: relative;
+}
+
+.heading h1{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 64px;
+    margin-left: 170px;
+    margin-top: 40px;
+    color: #000000;
+}
+
+.subhead{
+    display: flex;
+    margin-left: 170px;
+    margin-top: -10px;
+}
+
+.sixdot{
+    margin-right: 0px;
+}
+
+.subhead_details{
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    width: 500px;
+    margin-left: 5px;
+    margin-top: -10px;
+    color: #4f4f4f;
+}
+
+.head_img img{
+    width: 960px;
+    height: 460px;
+    margin-left: 170px;
+    margin-top: 20px;
+} 
+
+.recipe_body{
+    display: flex;
+}
+
+.ingredients_details{
+    width: 500px;
+    margin-left: 170px;
+}
+
+.ingredients_details h2{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 30px;
+    color: #333333;
+}
+
+.checkbox_details h3{
+    font-weight: normal;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+/* checkbox creation start */
+/* Customize the label (the container) */
+.chckbox_contain {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 25px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.chckbox_contain input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 21px;
+    width: 21px;
+    border-radius: 4px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.chckbox_contain:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.chckbox_contain input:checked ~ .checkmark {
+    background-color: #f2994a;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.chckbox_contain input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.chckbox_contain .checkmark:after {
+    left: 7px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/* checkbox creation end */
+
+.instruct{
+    display: flex;
+}
+
+.instruct_no p{
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 32px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #f2994a;
+    border-radius: 6px;
+}
+
+.instruct_details{
+    font-weight: normal;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.recipe_cred{
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    margin-top: 30px;
+    color: #bdbdbd;
+}
+
+.recipe_cred a{
+    text-decoration: none;
+    color: #bdbdbd;
+}
+
+.servings_time{
+    margin-left: 250px;
+    margin-top: 40px;
+    background: #ffffff;
+}
+
+.serv_contain{
+    display: flex;
+    margin-top: 12px;
+    margin-left: 40px;
+}
+
+.serv_img img{
+    width: 25px;
+    height: 25px;
+    margin-top: 15px;
+}
+.gold{
+    color: #f2994a;
+}
+.godown{
+    padding-top: 20px;
+}
+
+.serv_details h3{
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: uppercase;
+    margin-left: 10px;
+    color: #bdbdbd;
+}
+
+.serv_details p{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+footer{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    margin-top: 50px;
+    color: #a9a9a9;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .heading{
+        position: relative;
+    }
+
+    .heading h1{
+        font-size: 24px;
+        line-height: 32px;
+        margin-left: 11px;
+        margin-top: 30px;
+    }
+
+    .subhead{
+        margin-left: 11px;
+    }
+
+    .subhead_details{
+        font-size: 12px;
+        line-height: 15px;
+        width: 250px;
+    }
+
+    .head_img img{
+        width: 300px;
+        height: 160px;
+        margin-left: 11px;
+        margin-top: 10px;
+    } 
+
+    .recipe_body{
+        flex-direction: column;
+    }
+
+    .ingredients_details{
+        order: 2;
+        width: 300px;
+        margin-left: 11px;
+    }
+
+    .ingredients_details h2{
+        font-size: 18px;
+        line-height: 24px;
+        margin-top: 20px;
+    }
+
+    .checkbox_details h3{
+        font-size: 16px;
+        line-height: 21px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    /* checkbox creation start */
+    /* Customize the label (the container) */
+    .chckbox_contain {
+        padding-left: 25px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    /* checkbox creation end */
+
+    .instruct_details{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+
+    .recipe_cred{
+        font-size: 12px;
+    }
+
+    .servings_time{
+        order: 1;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-column-gap: 10px;
+        margin-left: 11px;
+        margin-top: 0px;
+    }
+
+    .serv_contain{
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+
+    .top{
+        grid-area: 1/1/2/4;
+    }
+    .undera{
+        grid-area: 2/1/3/2;
+    }
+    .underb{
+        grid-area: 2/2/3/3;
+    }
+    .underc{
+        grid-area: 2/3/3/4;
+    }
+
+    .serv_img img{
+        width: 14px;
+        height: 14px;
+    }
+
+    .serv_details h3{
+        font-size: 8px;
+        line-height: 10px;
+    }
+
+    .serv_details p{
+        font-size: 10px;
+        line-height: 12px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .servings_time{
+        width: 200px;
+        height: 350px;
+        margin-right: 2px;
+        box-shadow: 0px 0px 20px black;
+        border-radius: 12px;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up)  */
+@media only screen and (min-width: 992px) {
+    .servings_time{
+        width: 200px;
+        height: 350px;
+        box-shadow: 0px 0px 20px black;
+        border-radius: 12px;
+    }
+    
+}
